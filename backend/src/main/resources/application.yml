@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/task_manager?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:taskmanager}
+    password: ${DB_PASSWORD:taskmanager}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-me-to-a-long-secret-key-of-at-least-32-characters}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
