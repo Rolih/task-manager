@@ -321,9 +321,10 @@ gcloud run deploy task-manager-frontend \
   --allow-unauthenticated
 ```
 
-Pour une architecture production, utiliser plutôt Cloud SQL pour MySQL qu'un conteneur MySQL local.
+Pour une architecture en production, on utilisera plutôt Cloud SQL pour MySQL qu'un conteneur MySQL local.
+Pour le Projet la partie cloud n'a pas pu etre terminée mais ce sont les étapes à suivre.
 
-## 14. Démonstration recommandée
+## 14. Démonstration 
 
 1. Ouvrir le frontend.
 2. Créer un compte.
